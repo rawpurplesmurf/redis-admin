@@ -22,13 +22,41 @@ A modern web-based Redis database management interface built with Next.js, TypeS
 - **Form Handling**: React Hook Form
 - **Validation**: Zod
 
-## Prerequisites
+## Deployment Options
 
-- Node.js (Latest LTS version recommended)
-- Redis server (local or remote)
-- pnpm/npm/yarn package manager
+### Docker (Recommended)
 
-## Getting Started
+The easiest way to run Redis Manager is using Docker:
+
+```bash
+# Pull the image
+docker pull dkingshott/redis-manager:latest
+
+# Run the container
+docker run -p 3000:3000 dkingshott/redis-manager:latest
+```
+
+Then visit `http://localhost:3000` in your browser.
+
+#### Building Docker Image Locally
+
+If you want to build the Docker image yourself:
+
+```bash
+# Clone the repository
+git clone <repository-url>
+cd redis-manager
+
+# Build the Docker image
+docker build -t redis-manager .
+
+# Run the container
+docker run -p 3000:3000 redis-manager
+```
+
+### Local Development
+
+If you prefer to run the application locally:
 
 1. Clone the repository:
 ```bash
@@ -113,8 +141,8 @@ No environment variables are required to run the application locally. All Redis 
 
 ## Contributing
 
-I built this because I needed it, if you need to modify it, feel free to fork it and do so.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is open-source and available under the do whatever you want license.
+This project is open-source and available under the MIT License.
